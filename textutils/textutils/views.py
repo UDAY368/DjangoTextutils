@@ -1,10 +1,17 @@
 # This file is created by Uday
 # This module always return the responses
+"""
+-> We can pass 3 arguments into render method 1) request 2) .html file name 3) params as dict
+
+"""
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):       # It must take the at least one argument
-    return HttpResponse("Home")
+    params = {"name": "uday", "role": "Python Dev"}
+    return render(request, 'index.html', params)
+    # return HttpResponse("Home")
 
 
 def removepunc(request):
