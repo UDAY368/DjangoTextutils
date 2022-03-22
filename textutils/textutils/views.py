@@ -4,8 +4,24 @@ from django.http import HttpResponse
 
 
 def index(request):       # It must take the at least one argument
-    return HttpResponse("Hello World")
+    return HttpResponse("Home")
 
 
-def about(request):
-    return HttpResponse("This page is about Django Usage")
+def removepunc(request):
+    return HttpResponse("remove the punctuations")
+
+
+def capfirst(request):
+    return HttpResponse("capitalize the first letter")
+
+
+def newlineremove(request):
+    return HttpResponse("newline-remove")
+
+
+def spaceremover(request):
+    return HttpResponse("space remover")
+
+
+def charcount(request):
+    return HttpResponse("char-count")

@@ -20,5 +20,9 @@ from . import views      # You need to import the views file
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('about/', views.about, name='about')   # These are end points
+    path('removepunc', views.removepunc, name='removepun'),
+    path('capitalizefirst', views.capfirst, name='capfirst'),
+    path('newlineremove', views.newlineremove, name='newlineremove'),
+    path('spaceremover', views.spaceremover, name='spaceremover'),
+    path('charcount', views.charcount, name='charcount')
 ]
